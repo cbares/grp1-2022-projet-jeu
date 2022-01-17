@@ -75,7 +75,7 @@ state::Manageable::Manageable(std::vector<std::string> args)
     Render(false);
     if(Texture()->loadFromFile(args[3])==false){
         if (args[3] != "TEST_RESPATH") {
-            throw std::runtime_error("file '" + path + "' not found.");
+            throw std::runtime_error("file '" + args[3] + "' not found.");
         }
     }
     Sprite()->setTexture(*Texture());
