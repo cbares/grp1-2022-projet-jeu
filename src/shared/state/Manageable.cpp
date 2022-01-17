@@ -73,8 +73,8 @@ state::Manageable::Manageable(std::vector<std::string> args)
     Texture(new sf::Texture());
     Sprite(new sf::Sprite());
     Render(false);
-    if(Texture()->loadFromFile(path)==false){
-        if (path != "TEST_RESPATH") {
+    if(Texture()->loadFromFile(args[3])==false){
+        if (args[3] != "TEST_RESPATH") {
             throw std::runtime_error("file '" + path + "' not found.");
         }
     }
