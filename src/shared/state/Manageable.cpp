@@ -107,7 +107,11 @@ state::Manageable::Manageable(std::string name,int id,std::string path)
         return;
     Texture(new sf::Texture());
     Sprite(new sf::Sprite());
-    Texture()->loadFromFile(path);
+    if(Texture()->loadFromFile(path)==false){
+        if (path != "TEST_RESPATH") {
+            throw std::runtime_error("file '" + path + "' not found.");
+        }
+    }
     Render(false);
     Sprite()->setTexture(*Texture());
 }

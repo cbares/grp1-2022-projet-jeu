@@ -131,7 +131,7 @@ BOOST_AUTO_TEST_CASE(TestState)
   BOOST_CHECK_EQUAL(m.Position().x,4);
   BOOST_CHECK_EQUAL(m.Position().y,9);
 
-  Manageable *m4=new Manageable({"ACTOR_REDMAGE","ASSET_MGR","1105","res/texture/Characters/Prototypes/MageRed.png","2","2"});
+      Manageable *m4=new Manageable({"ACTOR_REDMAGE","ASSET_MGR","1105","res/texture/Characters/Prototypes/MageRed.png","2","2"});
   Manageable *m5=new Manageable("ACTOR_CYANMAGE,ASSET_MGR,1106,res/texture/Characters/Prototypes/MageCyan.png,2,2");
   m4->OnSelectionAdd();
   m4->OnSelectionRemove();
