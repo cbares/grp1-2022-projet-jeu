@@ -105,6 +105,7 @@ state::Manager* state::Manager::GetMgrByID(int id)
         if(m->ID() == (char)(id & 0xFF))
             return m;
     }
+    throw std::runtime_error("Manager not found (ID: " + std::to_string(id) + ")");
     return NULL;
 }
 

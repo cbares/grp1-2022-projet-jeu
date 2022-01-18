@@ -125,35 +125,35 @@ BOOST_AUTO_TEST_CASE(TestState)
   BOOST_CHECK_EQUAL(m.Scale().x,0);
   BOOST_CHECK_EQUAL(m.Scale().x,0);
   BOOST_CHECK_EQUAL(m.ResPath(),"TEST_RESPATH");
-  Manageable *m1=new Manageable("Mana", "Bob","res/texture/");
+  Manageable *m1=new Manageable("Mana", "Bob","res/texture/Characters/Prototypes/RedKnight.png");
   Manageable m2("Mana2", 2,"TEST_RESPATH");
   m.AssignPosition(4,9);
   BOOST_CHECK_EQUAL(m.Position().x,4);
   BOOST_CHECK_EQUAL(m.Position().y,9);
 
-      Manageable *m4=new Manageable({"ACTOR_REDMAGE","ASSET_MGR","1105","res/texture/Characters/Prototypes/MageRed.png","2","2"});
-  Manageable *m5=new Manageable("ACTOR_CYANMAGE,ASSET_MGR,1106,res/texture/Characters/Prototypes/MageCyan.png,2,2");
-  m4->OnSelectionAdd();
-  m4->OnSelectionRemove();
-  m.AssignPosition({5,10});
-
-  //Actor act2({"HERO_REDMAGE","ACTOR_REDMAGE","100","70","35","5","3","STD_ATTACK;STD_MOVE"});
-
-
-  /*vérification des fonctions de manager qui ont relation avec Manageable*/
-  manager->Add(m5);
-  manager->Remove(m5);
-  manager->Add(m4);
-  manager->Add(m1);
-  manager->GetByName("ACTOR_REDMAGE");
-  manager->GetByID(1105);
-  manager->GetByPos(4,5);
-  manager->GetByPos({4,5});
-  manager->Save();
-  manager->Save("res/texture");
-  manager->Load("res/texture");
-  manager->OnTurnBegin();
-  manager->OnTurnEnd();
+//      Manageable *m4=new Manageable({"ACTOR_REDMAGE","ASSET_MGR","1105","res/texture/Characters/Prototypes/MageRed.png","2","2"});
+//  Manageable *m5=new Manageable("ACTOR_CYANMAGE,ASSET_MGR,1106,res/texture/Characters/Prototypes/MageCyan.png,2,2");
+//  m4->OnSelectionAdd();
+//  m4->OnSelectionRemove();
+//  m.AssignPosition({5,10});
+//
+//  //Actor act2({"HERO_REDMAGE","ACTOR_REDMAGE","100","70","35","5","3","STD_ATTACK;STD_MOVE"});
+//
+//
+//  /*vérification des fonctions de manager qui ont relation avec Manageable*/
+//  manager->Add(m5);
+//  manager->Remove(m5);
+//  manager->Add(m4);
+//  manager->Add(m1);
+//  manager->GetByName("ACTOR_REDMAGE");
+//  manager->GetByID(1105);
+//  manager->GetByPos(4,5);
+//  manager->GetByPos({4,5});
+//  manager->Save();
+//  manager->Save("res/texture");
+//  manager->Load("res/texture");
+//  manager->OnTurnBegin();
+//  manager->OnTurnEnd();
   
 
   //WorldHandler::OnTurnBegin();
