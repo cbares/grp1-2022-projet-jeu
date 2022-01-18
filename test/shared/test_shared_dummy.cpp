@@ -126,7 +126,7 @@ BOOST_AUTO_TEST_CASE(TestState)
   BOOST_CHECK_EQUAL(m.Scale().x,0);
   BOOST_CHECK_EQUAL(m.ResPath(),"TEST_RESPATH");
   Manageable *m1=new Manageable("Mana", "Bob","res/texture/Characters/Prototypes/RedKnight.png");
-  Manageable m2("Mana2", 2,"TEST_RESPATH");
+  //Manageable m2("Mana2", 2,"TEST_RESPATH");
   m.AssignPosition(4,9);
   BOOST_CHECK_EQUAL(m.Position().x,4);
   BOOST_CHECK_EQUAL(m.Position().y,9);
